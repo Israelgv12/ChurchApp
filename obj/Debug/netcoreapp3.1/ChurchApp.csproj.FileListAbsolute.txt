@@ -180,3 +180,4 @@ C:\Users\User\Desktop\ChurchApp-1\obj\Debug\netcoreapp3.1\staticwebassets\Church
 C:\Users\User\Desktop\ChurchApp-1\obj\Debug\netcoreapp3.1\ChurchApp.dll
 C:\Users\User\Desktop\ChurchApp-1\obj\Debug\netcoreapp3.1\ChurchApp.pdb
 C:\Users\User\Desktop\ChurchApp-1\obj\Debug\netcoreapp3.1\ChurchApp.genruntimeconfig.cache
+C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\ChurchApp.RazorComponent.output.cache

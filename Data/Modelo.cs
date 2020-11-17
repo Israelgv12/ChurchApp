@@ -7,6 +7,7 @@ namespace ChurchApp
     public class Modelo
     {
         public int IntegranteId { get; set; }
+        public string Sexo {get; set; }
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
         public string Foto { get; set; }
@@ -25,6 +26,10 @@ namespace ChurchApp
         public string Nombre_Conyuge { get; set; }
         public bool Hijos { get; set; }
         public int Cantidad_Hijos { get; set; }
+        public string Profesion { get; set; }
+        public string Ocupacion  { get; set; }
+        public string Nombre_Empresa { get; set; }
+        public string Telefono_Empresa { get; set; }
         public DateTime Fecha_Conversion { get; set; }
         public DateTime Fecha_Bautismo { get; set; }
         public DateTime Fecha_Miembro { get; set; }

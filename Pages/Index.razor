@@ -1,4 +1,6 @@
 ﻿@page "/"
+@using ChurchApp.Data
+@inject IntegrantesService service
 
 
 <center>
@@ -6,15 +8,18 @@
 <h2>Datos Pesonales</h2>
 <br>
 </center>
-
 <div>
+  <EditForm Model="@NewIntegrante"> 
+<div>
+ 
 <label for="exampleInputEmail1">Sexo : </label>&nbsp;&nbsp;
 
-  <input type="radio" id="hombre" name="drone" value="dewey">
+  <input type="radio" id="hombre" name="drone" @bind-value="@NewIntegrante.Sexo">
   <label for="hombre">Hombre</label>
 
-  <input type="radio" id="mujer" name="drone" value="mujer">
+  <input type="radio" id="mujer" name="drone" @bind-value="@NewIntegrante.Sexo">
   <label for="mujer">Mujer</label>
+ 
 </div>
 <br>
 <center>
@@ -23,12 +28,12 @@
   <div class="row">
       <div class="col">
   <label for="exampleInputEmail1">Nombres </label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre">
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre" @bind-value="@NewIntegrante.Nombre">
   </div>
   <br>
   <div class="col">
   <label for="exampleInputEmail1">Apellidos </label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Apellido">
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Apellido" @bind-value="@NewIntegrante.Apellidos">
     </div>
     </div>
    <div class="row">
@@ -36,14 +41,14 @@
           <br>
           <br>
   <label for="exampleInputEmail1">Fecha de Nacimiento </label>
-    <input id="date" type="date">
+    <input id="date" type="date" @bind-value="@NewIntegrante.Fecha_Nacimiento">
     </div>
      <div class="col">
            <br>
            <br>
 <label for="exampleInputEmail1">Pais de Nacimiento</label>
-<select name="pais">
-  <option value="Seleccionar">Seleccionar</option>
+<select name="pais" @bind="@NewIntegrante.Pais_Nacimiento">
+  <option value="Seleccionar" >Seleccionar</option>
   <option value="AF">Afganistán</option>
   <option value="AL">Albania</option>
   <option value="DE">Alemania</option>
@@ -288,7 +293,7 @@
   <div class="row">
       <div class="col">
 <label for="exampleInputEmail1">Ciudad de Nacimiento </label>
- <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ciudad">
+ <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ciudad" @bind-value="@NewIntegrante.Ciudad_Nacimiento">
   </div>
   <br>
   
@@ -296,7 +301,7 @@
       <br>
       <br>
 <label for="exampleInputEmail1">Pais de Recidencia actual </label>
-<select name="pais">
+<select name="pais" @bind="@NewIntegrante.Pais_Residencia" >
      <option value="Seleccionar">Seleccionar</option>
      <option value="AF">Afganistán</option>
      <option value="AL">Albania</option>
@@ -539,31 +544,41 @@
   </div>
 
 
+
+
+
+
+
+
+
+<label for="exampleInputEmail1">Ciudad de Residencia Actual</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Provincia / sector / calle / No. de vivienda" @bind-value="@NewIntegrante.Ciudad_Residencia">
+<br>
 <label for="exampleInputEmail1">Direccion</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Provincia / sector / calle / No. de vivienda">
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Provincia / sector / calle / No. de vivienda" @bind-value="@NewIntegrante.Direccion">
 <br>
     <div class="row">
       <div class="col">
   <label for="exampleInputEmail1">Telefono</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Tel.">
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Tel." @bind-value="@NewIntegrante.Telefono">
   </div>
   <div class="col">
   <label for="exampleInputEmail1">Celular</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Celular">
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Celular" @bind-value="@NewIntegrante.Numero">
     </div>
     </div>
     <br>
     <label for="exampleInputEmail1">Correo Electronico</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Correo Electronico">
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Correo Electronico" @bind-value="@NewIntegrante.Correo">
 
 <div class="row">
       <div class="col">
 <br>
 <br>
 <label for="exampleInputEmail1">Tipo de Documento de Identidad : </label>&nbsp;&nbsp;
-<label for="cbox2">Cedula &nbsp;<input type="checkbox"></label>&nbsp;&nbsp;
-<label for="cbox2">Pasaporte &nbsp;<input type="checkbox"></label>&nbsp;&nbsp;
-<label for="cbox2">DNI &nbsp;<input type="checkbox"></label>
+<label for="cbox2">Cedula &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Tipo_Documento"></label>&nbsp;&nbsp;
+<label for="cbox2">Pasaporte &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Tipo_Documento"></label>&nbsp;&nbsp;
+<label for="cbox2">DNI &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Tipo_Documento"></label>
 
 
 
@@ -571,7 +586,7 @@
   </div>
   <div class="col">
   <label for="exampleInputEmail1">Documento Identidad</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Documento de Identidad">
+    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Documento de Identidad" @bind-value="@NewIntegrante.Documento">
     </div>
     </div>
 </center>
@@ -586,18 +601,18 @@
       <div class="col">
 
   <label for="exampleInputEmail1">Estado Civil : </label>
- <label for="cbox2">Casado &nbsp;<input type="checkbox"></label>&nbsp;&nbsp;
-<label for="cbox2">Soltero &nbsp;<input type="checkbox"></label>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre del Esposo">
+ <label for="cbox2">Casado &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Estado_Civil"></label>&nbsp;&nbsp;
+<label for="cbox2">Soltero &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Estado_Civil"></label>
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre del Esposo" @bind-value="@NewIntegrante.Estado_Civil">
   </div>
 
   <div class="col">
 
 <label for="exampleInputEmail1">Hijos : </label>
- <label for="cbox2">Si &nbsp;<input type="checkbox"></label>&nbsp;&nbsp;
-<label for="cbox2">No &nbsp;<input type="checkbox"></label>
+ <label for="cbox2">Si &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Hijos"></label>&nbsp;&nbsp;
+<label for="cbox2">No &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Hijos"></label>
 <br>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Numeros de Hijos">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Numeros de Hijos" @bind-value="@NewIntegrante.Cantidad_Hijos">
 
     </div>
     </div>
@@ -612,13 +627,13 @@
       <div class="col">
 
   <label for="exampleInputEmail1">Profesion </label>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Profesion">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Profesion" @bind-value="@NewIntegrante.Profesion">
   </div>
 
   <div class="col">
 
 <label for="exampleInputEmail1">Ocupacion Actual</label>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ocupacion">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ocupacion" @bind-value="@NewIntegrante.Ocupacion">
 
     </div>
     </div>
@@ -627,13 +642,13 @@
       <div class="col">
 
 <label for="exampleInputEmail1">Nombre de Empresa o Negocio</label>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Empresa o Negocio">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Empresa o Negocio" @bind-value="@NewIntegrante.Nombre_Empresa">
   </div>
 
   <div class="col">
 
 <label for="exampleInputEmail1">Telefono</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Tel.">
+        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Tel." @bind-value="@NewIntegrante.Telefono_Empresa">
 
     </div>
     </div>
@@ -649,19 +664,19 @@
       <div class="col">
 
 <label for="exampleInputEmail1">Fecha de Convercion </label>
-    <input id="date" type="date">
+    <input id="date" type="date" @bind-value="@NewIntegrante.Fecha_Conversion">
   </div>
 
   <div class="col">
 
 <label for="exampleInputEmail1">Fecha de Bautismo </label>
-    <input id="date" type="date">
+    <input id="date" type="date" @bind-value="@NewIntegrante.Fecha_Bautismo">
 
     </div>
      <div class="col">
 
 <label for="exampleInputEmail1">Fecha de aceptacion </label>
-    <input id="date" type="date">
+    <input id="date" type="date" @bind-value="@NewIntegrante.Fecha_Miembro">
 
     </div>
     </div>
@@ -673,25 +688,25 @@
   <label for="exampleInputEmail1">Denominación	a	la	que	pertenece :  </label>
   <br>
     <div class="col">
-  <input type="checkbox" id="denomin1" name="denomin1" value="Bautista">
+  <input type="checkbox" id="denomin1" name="denomin1" value="Bautista" @bind="@NewIntegrante.Denominacion">
             <label for="denomin1"> Bautista</label><br>
-            <input type="checkbox" id="denomin2" name="denomin2" value="Pentecostal">
+            <input type="checkbox" id="denomin2" name="denomin2" value="Pentecostal" @bind="@NewIntegrante.Denominacion">
             <label for="denomin2"> Pentecostal</label><br>
-            <input type="checkbox" id="denomin3" name="denomin3" value="Metodista">
+            <input type="checkbox" id="denomin3" name="denomin3" value="Metodista" @bind="@NewIntegrante.Denominacion">
             <label for="denomin3"> Metodista</label><br>
-            <input type="checkbox" id="denomin4" name="denomin4" value="Católica">
+            <input type="checkbox" id="denomin4" name="denomin4" value="Católica" @bind="@NewIntegrante.Denominacion">
             <label for="denomin4"> Católica</label><br>
-            <input type="checkbox" id="denomin5" name="denomin5" value="Presbiteriana">
+            <input type="checkbox" id="denomin5" name="denomin5" value="Presbiteriana" @bind="@NewIntegrante.Denominacion">
             <label for="denomin5"> Presbiteriana</label><br>
-            <input type="checkbox" id="denomin6" name="denomin6" value="Adventista">
+            <input type="checkbox" id="denomin6" name="denomin6" value="Adventista" @bind="@NewIntegrante.Denominacion">
             <label for="denomin6"> Adventista</label><br>
-            <input type="checkbox" id="denomin7" name="denomin7" value="Templo">
+            <input type="checkbox" id="denomin7" name="denomin7" value="Templo" @bind="@NewIntegrante.Denominacion">
             <label for="denomin7"> 	Templo	Bíblico</label><br>
-            <input type="checkbox" id="denomin8" name="denomin8" value="Menonita">
+            <input type="checkbox" id="denomin8" name="denomin8" value="Menonita" @bind="@NewIntegrante.Denominacion">
             <label for="denomin8"> Menonita</label><br>
-            <input type="checkbox" id="denomin9" name="denomin9" value="Luterana">
+            <input type="checkbox" id="denomin9" name="denomin9" value="Luterana" @bind="@NewIntegrante.Denominacion">
             <label for="denomin9"> Luterana</label><br>
-             <input type="text" class="form-control"  placeholder="otra"> 
+             <input type="text" class="form-control"  placeholder="otra"  @bind-value="@NewIntegrante.Denominacion"> 
        
 </div>
  </div>
@@ -704,13 +719,13 @@
       <div class="col">
 
   <label for="exampleInputEmail1">Nombre	de	la	Iglesia	a	la	que	asiste	actualmente</label>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Profesion">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Profesion" @bind-value="@NewIntegrante.Nombre_Iglesia">
   </div>
 
   <div class="col">
 
 <label for="exampleInputEmail1">Si asiste a esta Iglesia por un	tiempo menor a un año, ¿dónde	se congregaba	antes?</label>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Iglesia">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Iglesia" @bind-value="@NewIntegrante.Congregacion_Anterior">
 
     </div>
     </div>
@@ -718,13 +733,13 @@
       <div class="col">
 <br>
   <label for="exampleInputEmail1">Nombre	del	pastor	de	su	iglesia	actual</label>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Pastor">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Pastor" @bind-value="@NewIntegrante.Nombre_Pastor">
   </div>
 
 
   <div class="col">
 <br>
-<label for="exampleInputEmail1">¿Ha	sido	disciplinado	alguna	vez? Si &nbsp;<input type="checkbox"> No &nbsp;<input type="checkbox">	¿cuántas	veces?	</label>
+<label for="exampleInputEmail1">¿Ha	sido	disciplinado	alguna	vez? Si &nbsp;<input type="checkbox" value=1 @bind="@NewIntegrante.Disciplina"> No &nbsp;<input type="checkbox" value=0 @bind="@NewIntegrante.Disciplina">	¿cuántas	veces?	</label>
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Cantidad">
 
     </div>
@@ -732,7 +747,7 @@
     </center>
 <br>
     <label for="exampleInputEmail1">Causas</label>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Causas">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Causas" @bind-value="@NewIntegrante.Causas_Disciplina">
 <br>
 
   <div class="row">
@@ -740,25 +755,25 @@
   <label for="exampleInputEmail1">En	la	actualidad	ocupa	usted alguna	de	estas	funciones: </label>
   <br>
     <div class="col">
-           <input type="checkbox" id="Pastor" name="Pastor" value="Pastor">
+           <input type="checkbox" id="Pastor" name="Pastor" value="Pastor" @bind="@NewIntegrante.Ocupaciones">
            <label for="Pastor"> Pastor</label><br>
-           <input type="checkbox" id="Anciano" name="Anciano" value="Anciano">
+           <input type="checkbox" id="Anciano" name="Anciano" value="Anciano" @bind="@NewIntegrante.Ocupaciones">
            <label for="Anciano"> Anciano</label><br>
-           <input type="checkbox" id="Diacono" name="Diacono" value="Diacono">
+           <input type="checkbox" id="Diacono" name="Diacono" value="Diacono" @bind="@NewIntegrante.Ocupaciones">
            <label for="Diacono"> Diacono</label><br>
-           <input type="checkbox" id="Misionero" name="Misionero" value="Misionero">
+           <input type="checkbox" id="Misionero" name="Misionero" value="Misionero" @bind="@NewIntegrante.Ocupaciones">
            <label for="Misionero"> Misionero</label><br>
-           <input type="checkbox" id="LiderE" name="LiderE" value="LiderE">
+           <input type="checkbox" id="LiderE" name="LiderE" value="LiderE" @bind="@NewIntegrante.Ocupaciones">
            <label for="LiderE">Lider Escuela Dominical</label><br>
-           <input type="checkbox" id="Lidermj" name="Lidermj" value="Lidermj">
+           <input type="checkbox" id="Lidermj" name="Lidermj" value="Lidermj" @bind="@NewIntegrante.Ocupaciones">
            <label for="Lidermj">Lider Minist. de Jóvenes</label><br>
-           <input type="checkbox" id="Lidermd" name="Lidermd" value="Lidermd">
+           <input type="checkbox" id="Lidermd" name="Lidermd" value="Lidermd" @bind="@NewIntegrante.Ocupaciones">
            <label for="Lidermd">Lider Minist. de damas</label><br>
-           <input type="checkbox" id="Lidermc" name="Lidermc" value="Lidermc">
+           <input type="checkbox" id="Lidermc" name="Lidermc" value="Lidermc" @bind="@NewIntegrante.Ocupaciones">
            <label for="Lidermc"> Lider Minist. de caballeros</label><br>
-           <input type="checkbox" id="Lidermn" name="Lidermn" value="Lidermn">
+           <input type="checkbox" id="Lidermn" name="Lidermn" value="Lidermn" @bind="@NewIntegrante.Ocupaciones">
            <label for="Lidermn"> Lider Minist.	de niños</label><br>
-           <input type="checkbox" id="Liderp" name="Liderp" value="Liderp">
+           <input type="checkbox" id="Liderp" name="Liderp" value="Liderp" @bind="@NewIntegrante.Ocupaciones">
            <label for="Liderp"> Lider de grupo pequeño (Célula)</label>   
 </div>
  </div>
@@ -768,14 +783,14 @@
       <div class="col">
 <br>
   <label for="exampleInputEmail1">¿Cuáles	son	los	ministerios	en	los	que	ha	servido?	</label>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Pastor">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Pastor" @bind-value="@NewIntegrante.Pregunta1">
   </div>
 
 
   <div class="col">
 <br>
 <label for="exampleInputEmail1">¿En	cuál	de	estos	ministerios	considera	que	tuvo	mayor	fruto?	¿Por	qué?</label>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Cantidad">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Cantidad" @bind-value="@NewIntegrante.Pregunta2">
 
     </div>
     </div>
@@ -785,7 +800,7 @@
       <div class="col">
 <br>
   <label for="exampleInputEmail1">Considerando	sus	dones	y	talentos,	¿a	qué	ministerio	cree	usted	que	Dios	lo	está	llamando?</label>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Pastor">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Pastor" @bind-value="@NewIntegrante.Pregunta3">
   </div>
 
   <div class="col">
@@ -794,14 +809,14 @@
 <label for="exampleInputEmail1">¿Qué	metas	tiene	para	su	vida?	</label>
   <br>
   <br>
-<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Cantidad">
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Cantidad" @bind-value="@NewIntegrante.Pregunta4">
 
     </div>
     </div>
 <br>
-<label for="exampleInputEmail1">¿Qué	metas	tiene	para	su	vida?	 </label>
- <label for="cbox2">Si &nbsp;<input type="checkbox"></label>&nbsp;&nbsp;
-<label for="cbox2">No &nbsp;<input type="checkbox"></label>
+<label for="exampleInputEmail1">¿Cuenta	con	el	respaldo	de	sus	autoridades	eclesiásticas	para	realizar	estos	estudios?	 </label>
+ <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Si/No" @bind-value="@NewIntegrante.Pregunta5">
+
 
 
 <center>
@@ -815,9 +830,9 @@
   <div class="row">
       <div class="col">
   <label for="exampleInputEmail1">Nivel	de	estudio:	</label>
-  <select name="estudio">
+  <select name="estudio" @bind="@NewIntegrante.Nivel_Estudio">
      <option value="Seleccionar">Seleccionar</option>
-     <option value="PR">Primaria</option>
+     <option value="PR" >Primaria</option>
      <option value="SE">Secundaria</option>
      <option value="TE">Tecnico</option>
      <option value="GR">Grado</option>
@@ -829,19 +844,36 @@
   <div class="col">
   
   <label for="exampleInputEmail1">¿Alguna	vez	ha	sido	expulsado	o	suspendido	de	alguna	institución? </label>
-   <label for="cbox2">Si &nbsp;<input type="checkbox"></label>&nbsp;&nbsp;
-<label for="cbox2">No &nbsp;<input type="checkbox"></label>
+   <label for="cbox2">Si &nbsp;<input type="checkbox" value=1 @bind="@NewIntegrante.Expulsado"></label>&nbsp;&nbsp;
+<label for="cbox2">No &nbsp;<input type="checkbox" value=0 @bind="@NewIntegrante.Expulsado"></label>
     </div>
     </div>
 </center>
 <br>
 
 <label for="exampleInputEmail1">	En	caso	afirmativo,	¿por	qué	razón?</label>
-<input type="text" class="form-control" id="" placeholder="Razon">
+<input type="text" class="form-control" id="" placeholder="Razon" @bind="@NewIntegrante.Razon_Expulsion">
 
 <br>
 <br>
+</EditForm>
+</div>
 
+@code{
+
+    public Modelo NewIntegrante {get; set;} = new Modelo();
+
+    public async Task AddIntegrante(){
+      await service.AddIntegranteAsync(newIntegrante);
+      NewIntegrante= newIntegrante();
+    } 
+
+
+
+
+
+
+}
 
 
 
