@@ -91,14 +91,14 @@ using ChurchApp.Data;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 862 "C:\Programacion3\ChurchApp\Pages\Index.razor"
+#line 864 "C:\Programacion3\ChurchApp\Pages\Index.razor"
       
 
     public Modelo NewIntegrante {get; set;} = new Modelo();
 
     public async Task AddIntegrante(){
-      await service.AddIntegranteAsync(newIntegrante);
-      NewIntegrante= newIntegrante();
+      await service.AddIntegranteAsync(NewIntegrante);
+      NewIntegrante= new Modelo();
     } 
 
 
@@ -110,7 +110,7 @@ using ChurchApp.Data;
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IntegrantesService service { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IntegranteService service { get; set; }
     }
 }
 #pragma warning restore 1591

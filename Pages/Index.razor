@@ -1,6 +1,6 @@
 ﻿@page "/"
 @using ChurchApp.Data
-@inject IntegrantesService service
+@inject IntegranteService service
 
 
 <center>
@@ -856,6 +856,8 @@
 
 <br>
 <br>
+<button type="submit" class="btn btn-primary btn-lg btn-block" @onclick="@AddIntegrante">Agregar</button>
+<br>
 </EditForm>
 </div>
 
@@ -864,8 +866,8 @@
     public Modelo NewIntegrante {get; set;} = new Modelo();
 
     public async Task AddIntegrante(){
-      await service.AddIntegranteAsync(newIntegrante);
-      NewIntegrante= newIntegrante();
+      await service.AddIntegranteAsync(NewIntegrante);
+      NewIntegrante= new Modelo();
     } 
 
 

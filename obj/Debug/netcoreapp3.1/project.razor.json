@@ -12,68 +12,35 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -462795539,
+        "HashCode": 654862185,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.FetchData",
+        "Name": "ChurchApp.Pages.Index",
         "AssemblyName": "ChurchApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FetchData"
+            "TagName": "Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.FetchData"
+          "Common.TypeName": "ChurchApp.Pages.Index"
         }
       },
       {
-        "HashCode": 971701490,
+        "HashCode": 12576806,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.FetchData",
+        "Name": "ChurchApp.Pages.Index",
         "AssemblyName": "ChurchApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChurchApp.Pages.FetchData"
+            "TagName": "ChurchApp.Pages.Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 829373475,
-        "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.Error",
-        "AssemblyName": "ChurchApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Error"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.Error"
-        }
-      },
-      {
-        "HashCode": 2052054978,
-        "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.Error",
-        "AssemblyName": "ChurchApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ChurchApp.Pages.Error"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.Error",
+          "Common.TypeName": "ChurchApp.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -111,35 +78,68 @@
         }
       },
       {
-        "HashCode": 654862185,
+        "HashCode": 829373475,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.Index",
+        "Name": "ChurchApp.Pages.Error",
         "AssemblyName": "ChurchApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Index"
+            "TagName": "Error"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.Index"
+          "Common.TypeName": "ChurchApp.Pages.Error"
         }
       },
       {
-        "HashCode": 12576806,
+        "HashCode": 2052054978,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.Index",
+        "Name": "ChurchApp.Pages.Error",
         "AssemblyName": "ChurchApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChurchApp.Pages.Index"
+            "TagName": "ChurchApp.Pages.Error"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.Index",
+          "Common.TypeName": "ChurchApp.Pages.Error",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -462795539,
+        "Kind": "Components.Component",
+        "Name": "ChurchApp.Pages.FetchData",
+        "AssemblyName": "ChurchApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChurchApp.Pages.FetchData"
+        }
+      },
+      {
+        "HashCode": 971701490,
+        "Kind": "Components.Component",
+        "Name": "ChurchApp.Pages.FetchData",
+        "AssemblyName": "ChurchApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChurchApp.Pages.FetchData"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChurchApp.Pages.FetchData",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

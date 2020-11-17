@@ -1,6 +1,5 @@
 C:\Programacion3\ChurchApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Programacion3\ChurchApp\bin\Debug\netcoreapp3.1\appsettings.json
-C:\Programacion3\ChurchApp\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\Programacion3\ChurchApp\bin\Debug\netcoreapp3.1\ChurchApp.exe
 C:\Programacion3\ChurchApp\bin\Debug\netcoreapp3.1\ChurchApp.deps.json
 C:\Programacion3\ChurchApp\bin\Debug\netcoreapp3.1\ChurchApp.runtimeconfig.json
@@ -181,3 +180,4 @@ C:\Users\User\Desktop\ChurchApp-1\obj\Debug\netcoreapp3.1\ChurchApp.dll
 C:\Users\User\Desktop\ChurchApp-1\obj\Debug\netcoreapp3.1\ChurchApp.pdb
 C:\Users\User\Desktop\ChurchApp-1\obj\Debug\netcoreapp3.1\ChurchApp.genruntimeconfig.cache
 C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\ChurchApp.RazorComponent.output.cache
+C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\ChurchApp.styles.css

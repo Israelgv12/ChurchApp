@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ChurchApp
 {
     public class Modelo
     {
+        [Key]
         public int IntegranteId { get; set; }
         public string Sexo {get; set; }
         public string Nombre { get; set; }

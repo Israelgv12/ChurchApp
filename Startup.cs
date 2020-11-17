@@ -30,7 +30,7 @@ namespace ChurchApp
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();
             services.AddDbContext<AplicacionDbContext>();
-            services.AddScoped<IntegrantesService>();
+            services.AddScoped<IntegranteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
