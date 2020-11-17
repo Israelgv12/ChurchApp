@@ -13,12 +13,13 @@
 <div>
  
 <label for="exampleInputEmail1">Sexo : </label>&nbsp;&nbsp;
+<select name="Sexo" @bind="@NewIntegrante.Sexo">
+     <option value="Seleccionar">Seleccionar</option>
+     <option value="Hombre" >Hombre</option>
+     <option value="Mujer">Mujer</option>
+     
+     </select>
 
-  <input type="radio" id="hombre" name="drone" @bind-value="@NewIntegrante.Sexo">
-  <label for="hombre">Hombre</label>
-
-  <input type="radio" id="mujer" name="drone" @bind-value="@NewIntegrante.Sexo">
-  <label for="mujer">Mujer</label>
  
 </div>
 <br>
@@ -575,10 +576,13 @@
       <div class="col">
 <br>
 <br>
-<label for="exampleInputEmail1">Tipo de Documento de Identidad : </label>&nbsp;&nbsp;
-<label for="cbox2">Cedula &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Tipo_Documento"></label>&nbsp;&nbsp;
-<label for="cbox2">Pasaporte &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Tipo_Documento"></label>&nbsp;&nbsp;
-<label for="cbox2">DNI &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Tipo_Documento"></label>
+<label for="exampleInputEmail1">Tipo de Documento de Identidad : </label>
+<select name="Tipo_documento" @bind="@NewIntegrante.Tipo_Documento">
+     <option value="Seleccionar">Seleccionar</option>
+     <option value="Cedula" >Cedula</option>
+     <option value="Pasaporte">Pasaporte</option>
+     <option value="DNI">DNI</option>
+     </select>
 
 
 
@@ -601,16 +605,24 @@
       <div class="col">
 
   <label for="exampleInputEmail1">Estado Civil : </label>
- <label for="cbox2">Casado &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Estado_Civil"></label>&nbsp;&nbsp;
-<label for="cbox2">Soltero &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Estado_Civil"></label>
+  <select name="Estado_civil" @bind="@NewIntegrante.Tipo_Documento">
+     <option value="Seleccionar">Seleccionar</option>
+     <option value="Casado" >Casado</option>
+     <option value="Soltero">Soltero</option>
+     
+     </select>
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre del Esposo/a" @bind-value="@NewIntegrante.Nombre_Conyuge">
   </div>
 
   <div class="col">
 
 <label for="exampleInputEmail1">Hijos : </label>
- <label for="cbox2">Si &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Hijos"></label>&nbsp;&nbsp;
-<label for="cbox2">No &nbsp;<input type="checkbox" @bind-value="@NewIntegrante.Hijos"></label>
+<select name="Hijos" @bind="@NewIntegrante.Hijos">
+     <option value="Seleccionar">Seleccionar</option>
+     <option value="Si" >Si</option>
+     <option value="No">No</option>
+     
+     </select>
 <br>
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Numeros de Hijos" @bind-value="@NewIntegrante.Cantidad_Hijos">
 
@@ -688,25 +700,21 @@
   <label for="exampleInputEmail1">Denominación	a	la	que	pertenece :  </label>
   <br>
     <div class="col">
-  <input type="checkbox" id="denomin1" name="denomin1" value="Bautista" @bind="@NewIntegrante.Denominacion">
-            <label for="denomin1"> Bautista</label><br>
-            <input type="checkbox" id="denomin2" name="denomin2" value="Pentecostal" @bind="@NewIntegrante.Denominacion">
-            <label for="denomin2"> Pentecostal</label><br>
-            <input type="checkbox" id="denomin3" name="denomin3" value="Metodista" @bind="@NewIntegrante.Denominacion">
-            <label for="denomin3"> Metodista</label><br>
-            <input type="checkbox" id="denomin4" name="denomin4" value="Católica" @bind="@NewIntegrante.Denominacion">
-            <label for="denomin4"> Católica</label><br>
-            <input type="checkbox" id="denomin5" name="denomin5" value="Presbiteriana" @bind="@NewIntegrante.Denominacion">
-            <label for="denomin5"> Presbiteriana</label><br>
-            <input type="checkbox" id="denomin6" name="denomin6" value="Adventista" @bind="@NewIntegrante.Denominacion">
-            <label for="denomin6"> Adventista</label><br>
-            <input type="checkbox" id="denomin7" name="denomin7" value="Templo" @bind="@NewIntegrante.Denominacion">
-            <label for="denomin7"> 	Templo	Bíblico</label><br>
-            <input type="checkbox" id="denomin8" name="denomin8" value="Menonita" @bind="@NewIntegrante.Denominacion">
-            <label for="denomin8"> Menonita</label><br>
-            <input type="checkbox" id="denomin9" name="denomin9" value="Luterana" @bind="@NewIntegrante.Denominacion">
-            <label for="denomin9"> Luterana</label><br>
-             <input type="text" class="form-control"  placeholder="otra"  @bind-value="@NewIntegrante.Denominacion"> 
+      <select name="Denominacion" @bind="@NewIntegrante.Denominacion">
+     <option value="Seleccionar">Seleccionar</option>
+     <option value="Bautista" >Bautista</option>
+     <option value="Pentecostal">Pentecostal</option>
+     <option value="Metodista">Metodista</option>
+     <option value="Católica">Católica</option>
+     <option value="Presbiteriana">Presbiteriana</option>
+     <option value="Adventista">Adventista</option>
+     <option value="Templo Biblico">Templo Biblico</option>
+     <option value="Menonita">Menonita</option>
+     <option value="Luterana">Luterana</option>
+     </select>
+     <label for="exampleInputEmail1">Otra: </label>
+<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Otra denominacion" @bind-value="@NewIntegrante.Denominacion">
+  
        
 </div>
  </div>
@@ -739,7 +747,15 @@
 
   <div class="col">
 <br>
-<label for="exampleInputEmail1">¿Ha	sido	disciplinado	alguna	vez? Si &nbsp;<input type="checkbox" value=1 @bind="@NewIntegrante.Disciplina"> No &nbsp;<input type="checkbox" value=0 @bind="@NewIntegrante.Disciplina">	¿cuántas	veces?	</label>
+<label for="exampleInputEmail1">¿Ha	sido	disciplinado	alguna	vez? </label>
+<select name="Hijos" @bind="@NewIntegrante.Disciplina">
+     <option value="Seleccionar">Seleccionar</option>
+     <option value="Si" >Si</option>
+     <option value="No">No</option>
+     
+     </select>
+
+ 	<label for="exampleInputEmail1">¿cuántas	veces?	</label>
 <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Cantidad">
 
     </div>
@@ -755,26 +771,20 @@
   <label for="exampleInputEmail1">En	la	actualidad	ocupa	usted alguna	de	estas	funciones: </label>
   <br>
     <div class="col">
-           <input type="checkbox" id="Pastor" name="Pastor" value="Pastor" @bind="@NewIntegrante.Ocupaciones">
-           <label for="Pastor"> Pastor</label><br>
-           <input type="checkbox" id="Anciano" name="Anciano" value="Anciano" @bind="@NewIntegrante.Ocupaciones">
-           <label for="Anciano"> Anciano</label><br>
-           <input type="checkbox" id="Diacono" name="Diacono" value="Diacono" @bind="@NewIntegrante.Ocupaciones">
-           <label for="Diacono"> Diacono</label><br>
-           <input type="checkbox" id="Misionero" name="Misionero" value="Misionero" @bind="@NewIntegrante.Ocupaciones">
-           <label for="Misionero"> Misionero</label><br>
-           <input type="checkbox" id="LiderE" name="LiderE" value="LiderE" @bind="@NewIntegrante.Ocupaciones">
-           <label for="LiderE">Lider Escuela Dominical</label><br>
-           <input type="checkbox" id="Lidermj" name="Lidermj" value="Lidermj" @bind="@NewIntegrante.Ocupaciones">
-           <label for="Lidermj">Lider Minist. de Jóvenes</label><br>
-           <input type="checkbox" id="Lidermd" name="Lidermd" value="Lidermd" @bind="@NewIntegrante.Ocupaciones">
-           <label for="Lidermd">Lider Minist. de damas</label><br>
-           <input type="checkbox" id="Lidermc" name="Lidermc" value="Lidermc" @bind="@NewIntegrante.Ocupaciones">
-           <label for="Lidermc"> Lider Minist. de caballeros</label><br>
-           <input type="checkbox" id="Lidermn" name="Lidermn" value="Lidermn" @bind="@NewIntegrante.Ocupaciones">
-           <label for="Lidermn"> Lider Minist.	de niños</label><br>
-           <input type="checkbox" id="Liderp" name="Liderp" value="Liderp" @bind="@NewIntegrante.Ocupaciones">
-           <label for="Liderp"> Lider de grupo pequeño (Célula)</label>   
+ 
+ <select name="Ocupacion" @bind="@NewIntegrante.Ocupacion">
+     <option value="Seleccionar">Seleccionar</option>
+     <option value="Pastor" >Pastor</option>
+     <option value="Anciano">Anciano</option>
+     <option value="Misionero">Misionero</option>
+     <option value="Lider Escuela Dominical">Lider Escuela Dominical</option>
+     <option value="Lider Minist. de Jóvenes">Lider Minist. de Jóvenes</option>
+     <option value="Lider Minist. de damas">Lider Minist. de damas</option>
+     <option value="Lider Minist. de caballeros">Lider Minist. de caballeros</option>
+     <option value="Lider Minist. de niños">Lider Minist. de niños</option>
+     <option value="Lider de grupo pequeño">Lider de grupo pequeño</option>
+     </select>
+
 </div>
  </div>
     </div>
@@ -844,15 +854,18 @@
   <div class="col">
   
   <label for="exampleInputEmail1">¿Alguna	vez	ha	sido	expulsado	o	suspendido	de	alguna	institución? </label>
-   <label for="cbox2">Si &nbsp;<input type="checkbox" value=1 @bind="@NewIntegrante.Expulsado"></label>&nbsp;&nbsp;
-<label for="cbox2">No &nbsp;<input type="checkbox" value=0 @bind="@NewIntegrante.Expulsado"></label>
+  <select name="estudio" @bind="@NewIntegrante.Expulsado">
+     <option value="Seleccionar">Seleccionar</option>
+     <option value="Si" >Si</option>
+     <option value="No">No</option>
+     </select>
     </div>
     </div>
 </center>
 <br>
 
 <label for="exampleInputEmail1">	En	caso	afirmativo,	¿por	qué	razón?</label>
-<input type="text" class="form-control" id="" placeholder="Razon" @bind="@NewIntegrante.Razon_Expulsion">
+<input type="text" class="form-control" id="" placeholder="Razon" @bind-value="@NewIntegrante.Razon_Expulsion">
 
 <br>
 <br>
@@ -862,6 +875,7 @@
 </div>
 
 @code{
+
 
     public Modelo NewIntegrante {get; set;} = new Modelo();
 
