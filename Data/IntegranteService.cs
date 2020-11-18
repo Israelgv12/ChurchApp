@@ -49,12 +49,9 @@ namespace ChurchApp.Data
                 await DbContext.SaveChangesAsync();
         }
         catch(Exception)
-        {
-              
+        {       
            throw;
-
         }
-
         return modelo;
 
      }
@@ -69,7 +66,6 @@ namespace ChurchApp.Data
                  await DbContext.SaveChangesAsync();
 
              }
-
          }
          catch(Exception)
          {
@@ -77,7 +73,6 @@ namespace ChurchApp.Data
 
          }
          return modelo;
-
 
      }
      public async Task DeleteIntegranteAsync(Modelo modelo)
@@ -94,14 +89,6 @@ namespace ChurchApp.Data
 
          }
 
-     }
-
-
-
-    
-
-    
-
-     
+     }     
     }
 }
