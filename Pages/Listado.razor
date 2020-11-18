@@ -1,4 +1,9 @@
 @page "/Tables"
+@using ChurchApp.Data
+@inject IntegranteService Service
+@using BlazorInputFile
+@using System.IO
+
 
 <style>
     
@@ -16,15 +21,45 @@
                     <th>Sexo</th>
                     <th>Fecha de nacimiento</th>
                     <th>Cedula</th>
+                    <th>Foto</th>
+                    <th>Delete</th>
+                    <th>Update</th>
                 </tr>
             </thead>
+
             <tbody>
-             
+@using(var db=new AplicacionDbContext()){
+@foreach (var item in db.Integrantes.ToList())
+{
+    <tr>
+        <th scope="row">@item.IntegranteId</th>
+        <td>@item.Nombre</td>
+        <td>@item.Apellidos</td>
+        <td>@item.Sexo</td>
+        <td>@item.Fecha_Nacimiento</td>
+        <td>@item.Documento</td>
+        <td><img src="@item.Foto" width="100"></td>
+        <td><button class="btn btn-danger" @onclick="(() => DeleteIntegrante(item))">Delete</button></td>
+        <td><button class="btn btn-warning" @onclick="(() => DeleteIntegrante(item))">Update</button></td>
+        </tr>
+}
+        }
+        
             </tbody>
         </table>
     </div><br><br>
 
 @code {
+
+List<Modelo> modelos = new List<Modelo>();
+
+
+private async Task DeleteIntegrante(Modelo modelo)
+{
+await Service.DeleteIntegranteAsync(modelo);
+
+}
+
 
 
 

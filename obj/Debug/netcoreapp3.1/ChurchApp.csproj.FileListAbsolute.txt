@@ -179,7 +179,8 @@ C:\Users\User\Desktop\ChurchApp-1\obj\Debug\netcoreapp3.1\staticwebassets\Church
 C:\Users\User\Desktop\ChurchApp-1\obj\Debug\netcoreapp3.1\ChurchApp.dll
 C:\Users\User\Desktop\ChurchApp-1\obj\Debug\netcoreapp3.1\ChurchApp.pdb
 C:\Users\User\Desktop\ChurchApp-1\obj\Debug\netcoreapp3.1\ChurchApp.genruntimeconfig.cache
-C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\ChurchApp.RazorComponent.output.cache
-C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\ChurchApp.styles.css
 C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Listado.razor.g.cs
 C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\Razor\Pages\Listado.razor.g.cs
+C:\programacion3\ChurchApp\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\programacion3\ChurchApp\bin\Debug\netcoreapp3.1\ChurchApp.StaticWebAssets.xml
+C:\programacion3\ChurchApp\bin\Debug\netcoreapp3.1\BlazorInputFile.dll

@@ -1,5 +1,7 @@
 ﻿@page "/"
 @using ChurchApp.Data
+@using BlazorInputFile
+@using System.IO
 @inject IntegranteService service
 
 
@@ -11,6 +13,8 @@
 <div>
   <EditForm Model="@NewIntegrante"> 
 <div>
+
+
  
 <label for="exampleInputEmail1">Sexo : </label>&nbsp;&nbsp;
 <select name="Sexo" @bind="@NewIntegrante.Sexo">
@@ -19,6 +23,11 @@
      <option value="Mujer">Mujer</option>
      
      </select>
+
+     <div class="form-group image">
+                    <label for="nombre">Imagen :</label>
+                    <InputFile OnChange="HandleSelectImagen"></InputFile>
+                </div>
 
  
 </div>
@@ -301,7 +310,7 @@
   <div class="col">
       <br>
       <br>
-<label for="exampleInputEmail1">Pais de Recidencia actual </label>
+<label for="exampleInputEmail1">Pais de Residencia actual </label>
 <select name="pais" @bind="@NewIntegrante.Pais_Residencia" >
      <option value="Seleccionar">Seleccionar</option>
      <option value="AF">Afganistán</option>
@@ -876,23 +885,17 @@
 
 @code{
 
+    IFileListEntry image;
 
+    async Task HandleSelectImagen(IFileListEntry[] Images) 
+    {
+        image = Images.FirstOrDefault();
+    }
     public Modelo NewIntegrante {get; set;} = new Modelo();
 
     public async Task AddIntegrante(){
-      await service.AddIntegranteAsync(NewIntegrante);
+      await service.AddIntegranteAsync(NewIntegrante, image);
       NewIntegrante= new Modelo();
     } 
 
-
-
-
-
-
 }
-
-
-
-
-   
-  
