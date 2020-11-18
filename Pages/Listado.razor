@@ -3,6 +3,7 @@
 @inject IntegranteService Service
 @using BlazorInputFile
 @using System.IO
+@inject NavigationManager nav
 
 
 <style>
@@ -24,6 +25,7 @@
                     <th>Foto</th>
                     <th>Delete</th>
                     <th>Update</th>
+                    <th>Details</th>
                 </tr>
             </thead>
 
@@ -41,6 +43,7 @@
         <td><img src="@item.Foto" width="100"></td>
         <td><button class="btn btn-danger" @onclick="(() => DeleteIntegrante(item))">Delete</button></td>
         <td><button class="btn btn-warning" @onclick="(() => DeleteIntegrante(item))">Update</button></td>
+         <td><button class="btn btn-warning" @onclick="Detalle"></button></td>
         </tr>
 }
         }
@@ -58,6 +61,10 @@ private async Task DeleteIntegrante(Modelo modelo)
 {
 await Service.DeleteIntegranteAsync(modelo);
 
+}
+
+void Detalle(){
+    nav.NavigateTo("Detalle");
 }
 
 

@@ -1,0 +1,14 @@
+@page "/Detalle"
+@using ChurchApp.Data
+@inject IntegranteService Service
+@using BlazorInputFile
+@using System.IO
+
+<h2>Detalles de los Integrantes</h2>
+
+@using(var db = new AplicacionDbContext()){
+    @foreach (var item in db.Integrantes.ToList())
+    {
+        @item.Foto
+    }
+}

@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace ChurchApp.Shared
+namespace ChurchApp.Pages
 {
     #line hidden
     using System;
@@ -76,34 +76,35 @@ using ChurchApp.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Programacion3\ChurchApp\_Imports.razor"
+#line 2 "C:\Programacion3\ChurchApp\Pages\Detalle.razor"
+using ChurchApp.Data;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Programacion3\ChurchApp\Pages\Detalle.razor"
 using BlazorInputFile;
 
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 5 "C:\Programacion3\ChurchApp\Pages\Detalle.razor"
+using System.IO;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Detalle")]
+    public partial class Detalle : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 24 "C:\Programacion3\ChurchApp\Shared\NavMenu.razor"
-       
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
-    {
-        collapseNavMenu = !collapseNavMenu;
-    }
-
-#line default
-#line hidden
-#nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IntegranteService Service { get; set; }
     }
 }
 #pragma warning restore 1591
