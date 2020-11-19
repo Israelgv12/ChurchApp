@@ -12,35 +12,68 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 956562457,
+        "HashCode": -1024134622,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.App",
+        "Name": "ChurchApp.Pages.Detalle",
         "AssemblyName": "ChurchApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "Detalle"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.App"
+          "Common.TypeName": "ChurchApp.Pages.Detalle"
         }
       },
       {
-        "HashCode": -143636237,
+        "HashCode": -635023552,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.App",
+        "Name": "ChurchApp.Pages.Detalle",
         "AssemblyName": "ChurchApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChurchApp.App"
+            "TagName": "ChurchApp.Pages.Detalle"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.App",
+          "Common.TypeName": "ChurchApp.Pages.Detalle",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 654862185,
+        "Kind": "Components.Component",
+        "Name": "ChurchApp.Pages.Index",
+        "AssemblyName": "ChurchApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChurchApp.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 12576806,
+        "Kind": "Components.Component",
+        "Name": "ChurchApp.Pages.Index",
+        "AssemblyName": "ChurchApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChurchApp.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChurchApp.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -144,39 +177,6 @@
         }
       },
       {
-        "HashCode": 654862185,
-        "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.Index",
-        "AssemblyName": "ChurchApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 12576806,
-        "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.Index",
-        "AssemblyName": "ChurchApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ChurchApp.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -2119012790,
         "Kind": "Components.Component",
         "Name": "ChurchApp.Pages.Listado",
@@ -206,6 +206,39 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "ChurchApp.Pages.Listado",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 956562457,
+        "Kind": "Components.Component",
+        "Name": "ChurchApp.App",
+        "AssemblyName": "ChurchApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChurchApp.App"
+        }
+      },
+      {
+        "HashCode": -143636237,
+        "Kind": "Components.Component",
+        "Name": "ChurchApp.App",
+        "AssemblyName": "ChurchApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChurchApp.App"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChurchApp.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -306,6 +339,39 @@
         }
       },
       {
+        "HashCode": -344225724,
+        "Kind": "Components.Component",
+        "Name": "ChurchApp.Shared.NavMenu",
+        "AssemblyName": "ChurchApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChurchApp.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -1314003302,
+        "Kind": "Components.Component",
+        "Name": "ChurchApp.Shared.NavMenu",
+        "AssemblyName": "ChurchApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChurchApp.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChurchApp.Shared.NavMenu",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 980047571,
         "Kind": "Components.Component",
         "Name": "ChurchApp.Shared.SurveyPrompt",
@@ -359,35 +425,105 @@
         }
       },
       {
-        "HashCode": -344225724,
+        "HashCode": 1278003042,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.Shared.NavMenu",
-        "AssemblyName": "ChurchApp",
+        "Name": "BlazorInputFile.InputFile",
+        "AssemblyName": "BlazorInputFile",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "InputFile"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "UnmatchedParameters",
+            "TypeName": "System.Collections.Generic.Dictionary<System.String, System.Object>",
+            "Metadata": {
+              "Common.PropertyName": "UnmatchedParameters"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnChange",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<BlazorInputFile.IFileListEntry[]>",
+            "Metadata": {
+              "Common.PropertyName": "OnChange",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "MaxMessageSize",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "MaxMessageSize"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "MaxBufferSize",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "MaxBufferSize"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Shared.NavMenu"
+          "Common.TypeName": "BlazorInputFile.InputFile"
         }
       },
       {
-        "HashCode": -1314003302,
+        "HashCode": 433562754,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.Shared.NavMenu",
-        "AssemblyName": "ChurchApp",
+        "Name": "BlazorInputFile.InputFile",
+        "AssemblyName": "BlazorInputFile",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChurchApp.Shared.NavMenu"
+            "TagName": "BlazorInputFile.InputFile"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "UnmatchedParameters",
+            "TypeName": "System.Collections.Generic.Dictionary<System.String, System.Object>",
+            "Metadata": {
+              "Common.PropertyName": "UnmatchedParameters"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "OnChange",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<BlazorInputFile.IFileListEntry[]>",
+            "Metadata": {
+              "Common.PropertyName": "OnChange",
+              "Components.EventCallback": "True"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "MaxMessageSize",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "MaxMessageSize"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "MaxBufferSize",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "MaxBufferSize"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Shared.NavMenu",
+          "Common.TypeName": "BlazorInputFile.InputFile",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -14789,6 +14925,11 @@
     {
       "FilePath": "c:\\Programacion3\\ChurchApp\\Pages\\Error.razor",
       "TargetPath": "Pages\\Error.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Programacion3\\ChurchApp\\Pages\\Detalle.razor",
+      "TargetPath": "Pages\\Detalle.razor",
       "FileKind": "component"
     },
     {
