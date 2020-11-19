@@ -8,7 +8,115 @@
 
 @using(var db = new AplicacionDbContext()){
     @foreach (var item in db.Integrantes.ToList())
-    {
-        @item.Foto
+    {   <div class="container">
+        <div class="row">
+        <div class="col-sm">
+    <div class="card" style="width: 18rem;">
+        
+  <img src=@item.Foto class="card-img-top" alt="...">
+
+  </div>
+    <div class="card-text">@item.Nombre <br>
+                        @item.Apellidos <br>
+                        @item.Fecha_Nacimiento <br>
+                        @item.Pais_Nacimiento <br>
+                        @item.Ciudad_Nacimiento <br>
+                        @item.Pais_Residencia <br>
+                        @item.Ciudad_Residencia <br>
+                        @item.Direccion <br>
+                        @item.Telefono <br>
+                        @item.Numero <br>
+                        @item.Correo <br>
+                        @item.Tipo_Documento <br>
+                        @if(item.Estado_Civil==true)
+                        {
+                            @Estado_T;
+                        }
+                        else  {
+                            @Estado_F;
+                        }
+
+                        @item.Nombre_Conyuge <br>
+
+                        @if (item.Hijos==true)
+                        {
+                            @Hijos_T;
+                        }
+                        else{
+                            @Hijos_F;    
+                        } 
+                        <br>
+                        @item.Cantidad_Hijos <br>
+                        @item.Profesion <br>
+                        @item.Ocupacion <br>
+                        @item.Nombre_Empresa <br>
+                        @item.Telefono_Empresa <br>
+                        @item.Fecha_Conversion <br>
+                        @item.Fecha_Bautismo <br>
+                        @item.Fecha_Miembro <br>
+                        @item.Denominacion <br>
+                        @item.Nombre_Iglesia <br>
+                        @item.Congregacion_Anterior <br>
+                        @item.Nombre_Pastor <br>
+                        @if (item.Disciplina==true)
+                        {
+                            @Disciplina_T;
+                        }
+                        else
+                        {
+                            @Disciplina_F;
+                        }
+                        <br>
+                        @item.Cantidad_Disciplina <br>
+                        @item.Causas_Disciplina <br>
+                        @item.Ocupaciones <br>
+                        @item.Nivel_Estudio <br>
+                        @if (item.Expulsado==true)
+                        {
+                           @Expulsado_T; 
+                        }
+                        else
+                        {
+                            @Expulsado_F;
+                        }
+                        <br>
+                        @item.Razon_Expulsion <br>
+
+
+                        
+    
+  </div>
+    </div>
+    </div>
+    </div>
+        
     }
+}
+
+@code{
+    string Estado_T="Casado/a";
+    string Estado_F="Soltero/a";
+    string Hijos_T="Tiene Hijos";
+    string Hijos_F="No tiene Hijos";
+    string Disciplina_T="Ha sido disciplinado";
+    string Disciplina_F="No ha sido disciplinado";
+    string Expulsado_T="Ha sido expulsado";
+    string Expulsado_F="No ha sido expulsado";
+
+   /* var db = new AplicacionDbContext();
+    
+
+    foreach (var integrantes in db.Integrantes.ToList())
+    {
+    if(integrantes.Estado_Civil==true){
+    Estado_C="Casado"
+    }
+    else
+    {
+    Estado_C="Soltero";
+    }
+        
+    }*/
+
+
 }

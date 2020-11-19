@@ -104,6 +104,38 @@ using System.IO;
         {
         }
         #pragma warning restore 1998
+#nullable restore
+#line 96 "C:\Programacion3\ChurchApp\Pages\Detalle.razor"
+      
+    string Estado_T="Casado/a";
+    string Estado_F="Soltero/a";
+    string Hijos_T="Tiene Hijos";
+    string Hijos_F="No tiene Hijos";
+    string Disciplina_T="Ha sido disciplinado";
+    string Disciplina_F="No ha sido disciplinado";
+    string Expulsado_T="Ha sido expulsado";
+    string Expulsado_F="No ha sido expulsado";
+
+   /* var db = new AplicacionDbContext();
+    
+
+    foreach (var integrantes in db.Integrantes.ToList())
+    {
+    if(integrantes.Estado_Civil==true){
+    Estado_C="Casado"
+    }
+    else
+    {
+    Estado_C="Soltero";
+    }
+        
+    }*/
+
+
+
+#line default
+#line hidden
+#nullable disable
         [global::Microsoft.AspNetCore.Components.InjectAttribute] private IntegranteService Service { get; set; }
     }
 }
