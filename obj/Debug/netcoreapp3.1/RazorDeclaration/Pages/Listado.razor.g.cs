@@ -105,26 +105,53 @@ using System.IO;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 55 "C:\Programacion3\ChurchApp\Pages\Listado.razor"
-       
+#line 938 "C:\Programacion3\ChurchApp\Pages\Listado.razor"
+      
 
-List<Modelo> modelos = new List<Modelo>();
+    private string buscando="";
+    IFileListEntry image;
+    Modelo UpdateIntegrante = new Modelo();
+    List<Modelo> modelos = new List<Modelo>();
+    
+    AplicacionDbContext peregrinos = new AplicacionDbContext();
 
+    async Task HandleSelectImagen(IFileListEntry[] Images) 
+    {
+        image = Images.FirstOrDefault();
+    }
+  private void SetIntegranteForUpdate(Modelo modelo){
 
-private async Task DeleteIntegrante(Modelo modelo)
+      UpdateIntegrante = modelo;
+
+  }
+  private async Task DeleteIntegrante(Modelo modelo)
 {
 await Service.DeleteIntegranteAsync(modelo);
+ await RefreshIntegrante();
 
 }
-
 void Detalle(){
     nav.NavigateTo("Detalle");
 }
 
+   private async Task UpdateIntegranteData(){
+
+    await Service.UpdateIntegranteAsync(UpdateIntegrante);
+     await RefreshIntegrante();
+
+  }
+
+  protected override async Task OnInitializedAsync(){
+
+      await RefreshIntegrante();
+
+  }
+
+  private async Task RefreshIntegrante(){
+       modelos = await Service.GetModelosAsync();
+  }
 
 
-
-    
 
 #line default
 #line hidden

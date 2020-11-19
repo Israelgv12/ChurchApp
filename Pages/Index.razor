@@ -886,6 +886,7 @@
 @code{
 
     IFileListEntry image;
+    List<Modelo> modelos = new List<Modelo>();
 
     async Task HandleSelectImagen(IFileListEntry[] Images) 
     {
@@ -896,6 +897,10 @@
     public async Task AddIntegrante(){
       await service.AddIntegranteAsync(NewIntegrante, image);
       NewIntegrante= new Modelo();
+      await RefreshIntegrante();
     } 
+  private async Task RefreshIntegrante(){
+    modelos = await service.GetModelosAsync();
+  }
 
 }

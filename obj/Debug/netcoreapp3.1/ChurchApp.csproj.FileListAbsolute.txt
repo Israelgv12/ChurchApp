@@ -187,3 +187,5 @@ C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\ChurchApp.RazorComponent.outp
 C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\ChurchApp.styles.css
 C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Detalle.razor.g.cs
 C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\Razor\Pages\Detalle.razor.g.cs
+C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Update.razor.g.cs
+C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\Razor\Pages\Update.razor.g.cs

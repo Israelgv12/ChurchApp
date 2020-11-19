@@ -76,28 +76,28 @@ using ChurchApp.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Programacion3\ChurchApp\Pages\Index.razor"
+#line 2 "C:\Programacion3\ChurchApp\Pages\Update.razor"
 using ChurchApp.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Programacion3\ChurchApp\Pages\Index.razor"
+#line 3 "C:\Programacion3\ChurchApp\Pages\Update.razor"
 using BlazorInputFile;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Programacion3\ChurchApp\Pages\Index.razor"
+#line 4 "C:\Programacion3\ChurchApp\Pages\Update.razor"
 using System.IO;
 
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/")]
-    public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Update")]
+    public partial class Update : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -105,26 +105,40 @@ using System.IO;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 886 "C:\Programacion3\ChurchApp\Pages\Index.razor"
+#line 886 "C:\Programacion3\ChurchApp\Pages\Update.razor"
       
 
     IFileListEntry image;
+    Modelo UpdateIntegrante = new Modelo();
     List<Modelo> modelos = new List<Modelo>();
 
     async Task HandleSelectImagen(IFileListEntry[] Images) 
     {
         image = Images.FirstOrDefault();
     }
-    public Modelo NewIntegrante {get; set;} = new Modelo();
+  private void SetIntegranteForUpdate(Modelo modelo){
 
-    public async Task AddIntegrante(){
-      await service.AddIntegranteAsync(NewIntegrante, image);
-      NewIntegrante= new Modelo();
-      await RefreshIntegrante();
-    } 
-  private async Task RefreshIntegrante(){
-    modelos = await service.GetModelosAsync();
+      UpdateIntegrante = modelo;
+
   }
+
+   private async Task UpdateIntegranteData(){
+
+    await service.UpdateIntegranteAsync(UpdateIntegrante);
+     await RefreshIntegrante();
+
+  }
+
+  protected override async Task OnInitializedAsync(){
+
+      await RefreshIntegrante();
+
+  }
+
+  private async Task RefreshIntegrante(){
+       modelos = await service.GetModelosAsync();
+  }
+
 
 
 #line default

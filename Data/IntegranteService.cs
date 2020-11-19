@@ -59,10 +59,10 @@ namespace ChurchApp.Data
      {
          try
          {
-             var integranteExist = DbContext.Integrantes.FirstOrDefault(p=> p.IntegranteId == modelo.IntegranteId);
+             var integranteExist = DbContext.Integrantes.FirstOrDefault(p => p.IntegranteId == modelo.IntegranteId);
              if (integranteExist != null)
              {
-                 DbContext.Integrantes.Add(modelo);
+                 DbContext.Integrantes.Update(modelo);
                  await DbContext.SaveChangesAsync();
 
              }
