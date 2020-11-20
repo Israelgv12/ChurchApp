@@ -24,9 +24,9 @@ namespace ChurchApp
         public string Correo { get; set; }
         public string Tipo_Documento { get; set; }
         public string Documento { get; set; }
-        public bool Estado_Civil { get; set; }
+        public string Estado_Civil { get; set; }
         public string Nombre_Conyuge { get; set; }
-        public bool Hijos { get; set; }
+        public string Hijos { get; set; }
         public int Cantidad_Hijos { get; set; }
         public string Profesion { get; set; }
         public string Ocupacion  { get; set; }
@@ -39,7 +39,7 @@ namespace ChurchApp
         public string Nombre_Iglesia { get; set; }
         public string Congregacion_Anterior { get; set; }
         public string Nombre_Pastor { get; set; }
-        public bool Disciplina { get; set; }
+        public string Disciplina { get; set; }
         public int Cantidad_Disciplina { get; set; }
         public string Causas_Disciplina { get; set; }
         public string Ocupaciones { get; set; }
@@ -49,7 +49,7 @@ namespace ChurchApp
         public string Pregunta4 { get; set; }
         public string Pregunta5 { get; set; }
         public string Nivel_Estudio { get; set; }
-        public bool Expulsado { get; set; }
+        public string Expulsado { get; set; }
         public string Razon_Expulsion { get; set; }
 
     }

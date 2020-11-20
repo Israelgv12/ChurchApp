@@ -52,17 +52,17 @@ namespace ChurchApp.Migrations
                     b.Property<string>("Direccion")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Disciplina")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Disciplina")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Documento")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Estado_Civil")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Estado_Civil")
+                        .HasColumnType("TEXT");
 
-                    b.Property<bool>("Expulsado")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Expulsado")
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Fecha_Bautismo")
                         .HasColumnType("TEXT");
@@ -79,8 +79,8 @@ namespace ChurchApp.Migrations
                     b.Property<string>("Foto")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Hijos")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Hijos")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Nivel_Estudio")
                         .HasColumnType("TEXT");

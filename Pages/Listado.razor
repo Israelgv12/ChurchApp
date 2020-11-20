@@ -25,8 +25,10 @@
                     <th>Fecha de nacimiento</th>
                     <th>Cedula</th>
                     <th>Foto</th>
-                    <th>Delete</th>
+                    
                     <th>Details</th>
+                    <th>Editar</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
 
@@ -35,7 +37,7 @@
  @if(@modelos.Any()){
 @foreach (var item in modelos)
 {
-    <tr @onclick="(() => SetIntegranteForUpdate(item))">
+    <tr>
         <th scope="row">@item.IntegranteId</th>
         <td>@item.Nombre</td>
         <td>@item.Apellidos</td>
@@ -43,8 +45,12 @@
         <td>@item.Fecha_Nacimiento</td>
         <td>@item.Documento</td>
         <td><img src="@item.Foto" width="100"></td>
-        <td><button class="btn btn-danger" @onclick="(() => DeleteIntegrante(item))">Delete</button></td>
-         <td><button class="btn btn-info" @onclick="Detalle">Details</button></td>
+        
+         <td><button class="btn btn-info" @onclick="()=>SetModal(item)" data-toggle="modal"
+           data-target="#IntegrantesModalDetalle">Ver detalles
+         </button></td>
+         <td><button class="btn btn-warning" @onclick="(() => SetIntegranteForUpdate(item))">Editar</button></td>
+         <td><button class="btn btn-danger" @onclick="(() => DeleteIntegrante(item))">Delete</button></td>
         </tr>
 }
  }
@@ -57,6 +63,8 @@
     <div>
 
 <center>
+
+  <Modaldetalle Id ="@modalId" ts="@ModalT" />
     <br>
 <h2>Actualizar Datos Personales</h2>
 <br>
@@ -832,7 +840,7 @@
   <br>
     <div class="col">
  
- <select name="Ocupacion" @bind="@UpdateIntegrante.Ocupacion">
+ <select name="Ocupaciones" @bind="@UpdateIntegrante.Ocupaciones">
      <option value="Seleccionar">Seleccionar</option>
      <option value="Pastor" >Pastor</option>
      <option value="Anciano">Anciano</option>
@@ -941,12 +949,22 @@
     IFileListEntry image;
     Modelo UpdateIntegrante = new Modelo();
     List<Modelo> modelos = new List<Modelo>();
+
+      Modelo ModalT = new Modelo();
+
+      private string modalId = "IntegrantesModalDetalle";
     
     AplicacionDbContext peregrinos = new AplicacionDbContext();
 
     async Task HandleSelectImagen(IFileListEntry[] Images) 
     {
         image = Images.FirstOrDefault();
+    }
+
+
+    private void SetModal(Modelo t)
+    {
+        ModalT = t;
     }
   private void SetIntegranteForUpdate(Modelo modelo){
 

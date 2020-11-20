@@ -12,68 +12,35 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -1024134622,
+        "HashCode": 956562457,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.Detalle",
+        "Name": "ChurchApp.App",
         "AssemblyName": "ChurchApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Detalle"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.Detalle"
+          "Common.TypeName": "ChurchApp.App"
         }
       },
       {
-        "HashCode": -635023552,
+        "HashCode": -143636237,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.Detalle",
+        "Name": "ChurchApp.App",
         "AssemblyName": "ChurchApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChurchApp.Pages.Detalle"
+            "TagName": "ChurchApp.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.Detalle",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 654862185,
-        "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.Index",
-        "AssemblyName": "ChurchApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 12576806,
-        "Kind": "Components.Component",
-        "Name": "ChurchApp.Pages.Index",
-        "AssemblyName": "ChurchApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "ChurchApp.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.Pages.Index",
+          "Common.TypeName": "ChurchApp.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -177,6 +144,39 @@
         }
       },
       {
+        "HashCode": 654862185,
+        "Kind": "Components.Component",
+        "Name": "ChurchApp.Pages.Index",
+        "AssemblyName": "ChurchApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChurchApp.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 12576806,
+        "Kind": "Components.Component",
+        "Name": "ChurchApp.Pages.Index",
+        "AssemblyName": "ChurchApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ChurchApp.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "ChurchApp.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -2119012790,
         "Kind": "Components.Component",
         "Name": "ChurchApp.Pages.Listado",
@@ -210,35 +210,71 @@
         }
       },
       {
-        "HashCode": 956562457,
+        "HashCode": 2065078286,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.App",
+        "Name": "ChurchApp.Pages.Modaldetalle",
         "AssemblyName": "ChurchApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "Modaldetalle"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ts",
+            "TypeName": "ChurchApp.Modelo",
+            "Metadata": {
+              "Common.PropertyName": "ts"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.App"
+          "Common.TypeName": "ChurchApp.Pages.Modaldetalle"
         }
       },
       {
-        "HashCode": -143636237,
+        "HashCode": -287304933,
         "Kind": "Components.Component",
-        "Name": "ChurchApp.App",
+        "Name": "ChurchApp.Pages.Modaldetalle",
         "AssemblyName": "ChurchApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ChurchApp.App"
+            "TagName": "ChurchApp.Pages.Modaldetalle"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "Id",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "Id"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "ts",
+            "TypeName": "ChurchApp.Modelo",
+            "Metadata": {
+              "Common.PropertyName": "ts"
+            }
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "ChurchApp.App",
+          "Common.TypeName": "ChurchApp.Pages.Modaldetalle",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -14928,11 +14964,6 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "c:\\Programacion3\\ChurchApp\\Pages\\Detalle.razor",
-      "TargetPath": "Pages\\Detalle.razor",
-      "FileKind": "component"
-    },
-    {
       "FilePath": "c:\\Programacion3\\ChurchApp\\Shared\\MainLayout.razor",
       "TargetPath": "Shared\\MainLayout.razor",
       "FileKind": "component"
@@ -14950,6 +14981,11 @@
     {
       "FilePath": "c:\\Programacion3\\ChurchApp\\Pages\\Counter.razor",
       "TargetPath": "Pages\\Counter.razor",
+      "FileKind": "component"
+    },
+    {
+      "FilePath": "c:\\Programacion3\\ChurchApp\\Pages\\Modaldetalle.razor",
+      "TargetPath": "Pages\\Modaldetalle.razor",
       "FileKind": "component"
     },
     {

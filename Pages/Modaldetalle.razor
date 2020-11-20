@@ -1,0 +1,211 @@
+@using System.Drawing
+@using Data
+@using Microsoft.JSInterop
+@inject IJSRuntime runtime
+@using System.Text.Json;
+@using System.Text.Json.Serialization;
+
+
+
+
+<div class="modal fade bd-example-modal-lg" id="@(Id)" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!--h5 class="modal-title" id="exampleModalLabel">@Title</h5-->
+        <div class="d-flex justify-content-between">
+        <button @onclick="viewpersonales" class="btn btn-link">Personales</button>
+        <button @onclick="viewFamiliar" class="btn btn-link">Familiares</button>
+        <button @onclick="viewLaboral" class="btn btn-link">Laborales</button>
+        <button @onclick="viewEcle" class="btn btn-link">Eclesiasticos</button>
+        <button @onclick="viewAcademico" class="btn btn-link">Academicos</button>
+    </div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<!---------------------------------->
+<div>
+    @if(personal){
+    <div>
+      <p><b>Sexo: </b>@ts.Sexo</p>
+        <p><b>Nombre: </b>@ts.Nombre</p>
+        <p><b>Apellido: </b>@ts.Apellidos </p>
+                <p><b>Fecha de Nacimiento: </b>@ts.Fecha_Nacimiento</p>
+
+        <p><b>Pais de Nacimiento: </b>@ts.Pais_Nacimiento</p>
+        <p><b>Ciudad de nacimiento: </b>@ts.Ciudad_Nacimiento</p>
+                                        <p><b>Ciudad de Residencia: </b>@ts.Ciudad_Residencia</p>
+
+                <p><b>Direccion: </b>@ts.Direccion</p>
+                                <p><b>Telefono: </b>@ts.Telefono</p>
+                <p><b>Celular: </b>@ts.Numero</p>
+                                <p><b>Correo: </b>@ts.Correo</p>
+                                <p><b>Tipo de documento de identidad: </b>@ts.Tipo_Documento</p>
+                <p><b>Documento de identidad: </b>@ts.Documento</p>
+
+
+        
+    </div>
+    }
+    
+     @if(familiar){
+    <div>
+      <p><b>Estado Civil: </b>@ts.Estado_Civil</p>
+        <p><b>Nombre de esposa: </b>@ts.Nombre_Conyuge</p>
+        
+       
+                    
+                    
+                    @if(@ts.Hijos == "Si"){
+                        <p><b>Tiene hijos?: </b>@ts.Hijos </p>
+                 <p><b>Cantidad de hijos: </b>@ts.Cantidad_Hijos</p>
+
+                    }
+                    else{
+
+                        <p><b>Tiene hijos?: </b>@ts.Hijos </p>
+                    }
+                        
+            
+
+      
+
+               
+        
+    </div>
+    }
+   
+   @if(laboral){
+    <div>
+      <p><b>Profesion: </b>@ts.Profesion</p>
+        <p><b>Ocupacion actual: </b>@ts.Ocupacion</p>
+        <p><b>Nombre de la empresa: </b>@ts.Nombre_Empresa </p>
+                <p><b>Telefono:  </b>@ts.Telefono_Empresa</p>
+
+
+        
+    </div>
+    }
+    @if(eclesiasticos){
+    <div>
+      <p><b>Fecha de conversion: </b>@ts.Fecha_Conversion</p>
+        <p><b>Fecha de bautismo: </b>@ts.Fecha_Bautismo</p>
+        <p><b>Fecha de aceptacion: </b>@ts.Fecha_Miembro</p>
+        <p><b>Denominacion: </b>@ts.Denominacion</p>
+        <p><b>Nombre de la iglesia: </b>@ts.Nombre_Iglesia</p>
+       <p><b>Pastor de la iglesia: </b>@ts.Nombre_Pastor</p>
+        <p><b>Congregación anterior: </b>@ts.Congregacion_Anterior</p>
+           
+@if(ts.Disciplina == "Si" ){
+               <p><b>Has sido disciplinado?: </b>Si</p>
+                 <p><b>Cuantas veces?: </b>@ts.Cantidad_Disciplina</p>
+                                <p><b>Causa: </b>@ts.Causas_Disciplina</p>
+
+        }
+        else{
+                         <p><b>Has sido disciplinado?: </b>No</p>
+
+        }
+    
+               
+                                <p><b>Funciones en iglesia: </b>@ts.Ocupaciones</p>
+                <p><b>Ministerios en los que ha servido: </b>@ts.Pregunta1</p>
+
+                <p><b>Ministerio con mayor fruto: </b>@ts.Pregunta2</p>
+                <p><b>Ministerio al que Dios lo llama: </b>@ts.Pregunta3</p>
+
+                <p><b>Metas para su vida: </b>@ts.Pregunta4</p>
+                <p><b>Respaldo de autoridades eclesiasticas: </b>@ts.Pregunta5</p>
+
+
+
+        
+    </div>
+    }
+    @if(academicos){
+    <div>
+      <p><b>Nivel de estudio: </b>@ts.Nivel_Estudio</p>
+
+               @if(ts.Expulsado == "Si" ){
+                  <p><b>Ha sido expulsado alguna vez?: </b>Si</p>
+
+                  <p><b>Razón de la expulsion: </b>@ts.Razon_Expulsion</p>
+
+        }
+        else{
+                  <p><b>Ha sido expulsado alguna vez?: </b>No</p>
+
+        }
+  
+    </div>
+    }
+   
+</div>
+</div>
+<!----------------------------------------------------->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+@code {
+    [Parameter]
+    public string Id {get; set;}
+    [Parameter]
+    public Modelo ts {get; set;}
+
+    private string Title;
+
+    private bool personal = true;
+    private bool familiar = false;
+    private bool laboral = false;
+        private bool eclesiasticos = false;
+    private bool academicos = false;
+
+
+    private void viewpersonales(){
+        
+    personal = true;
+    familiar = false;
+      laboral = false;
+          eclesiasticos = false;
+      academicos = false;
+    }
+    private void viewFamiliar(){
+         personal = false;
+      familiar = true;
+      laboral = false;
+          eclesiasticos = false;
+      academicos = false;
+    }
+    private void viewLaboral(){
+         personal = false;
+      familiar = false;
+      laboral = true;
+          eclesiasticos = false;
+      academicos = false;
+    }
+    private void viewEcle(){
+         personal = false;
+      familiar = false;
+      laboral = false;
+          eclesiasticos = true;
+      academicos = false;
+    }
+    private void viewAcademico(){
+         personal = false;
+      familiar = false;
+      laboral = false;
+          eclesiasticos = false;
+      academicos = true;
+    }
+   
+
+
+}

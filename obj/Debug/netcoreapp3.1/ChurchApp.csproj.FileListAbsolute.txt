@@ -185,5 +185,5 @@ C:\programacion3\ChurchApp\bin\Debug\netcoreapp3.1\ChurchApp.StaticWebAssets.xml
 C:\programacion3\ChurchApp\bin\Debug\netcoreapp3.1\BlazorInputFile.dll
 C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\ChurchApp.RazorComponent.output.cache
 C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\ChurchApp.styles.css
-C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Detalle.razor.g.cs
-C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\Razor\Pages\Detalle.razor.g.cs
+C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Modaldetalle.razor.g.cs
+C:\Programacion3\ChurchApp\obj\Debug\netcoreapp3.1\Razor\Pages\Modaldetalle.razor.g.cs
